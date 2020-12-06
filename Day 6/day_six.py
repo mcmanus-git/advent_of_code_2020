@@ -19,5 +19,6 @@ print(sum(counts))
 
 # Part Two Tweaked:
 import collections
-print(sum([len([i for i in collections.Counter("".join(group)).values() if i == len(group)]) for group in [i.split() for i in open('input.txt', 'r').read().split('\n\n')]]))
+print(sum([len([i for i in collections.Counter("".join(group)).values() if i == len(group)])\
+           for group in [i.split() for i in open('input.txt', 'r').read().split('\n\n')]]))
 
